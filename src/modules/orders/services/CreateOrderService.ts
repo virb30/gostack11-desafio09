@@ -85,6 +85,3 @@ class CreateOrderService {
 }
 
 export default CreateOrderService;
-
-// registrar compra
-// debitar os itens do estoque
