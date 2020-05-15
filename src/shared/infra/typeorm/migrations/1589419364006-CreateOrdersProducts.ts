@@ -18,6 +18,7 @@ export default class CreateOrdersProducts1589419364006
             isPrimary: true,
             isGenerated: true,
             generationStrategy: 'uuid',
+            default: 'uuid_generate_v4()',
           },
           {
             name: 'product_id',
@@ -58,6 +59,8 @@ export default class CreateOrdersProducts1589419364006
         columnNames: ['order_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'orders',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       }),
     );
 
@@ -68,6 +71,8 @@ export default class CreateOrdersProducts1589419364006
         columnNames: ['product_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'products',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       }),
     );
   }

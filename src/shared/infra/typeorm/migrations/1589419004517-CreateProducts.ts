@@ -12,6 +12,7 @@ export default class CreateProducts1589419004517 implements MigrationInterface {
             isPrimary: true,
             isGenerated: true,
             generationStrategy: 'uuid',
+            default: 'uuid_generate_v4()',
           },
           {
             name: 'name',

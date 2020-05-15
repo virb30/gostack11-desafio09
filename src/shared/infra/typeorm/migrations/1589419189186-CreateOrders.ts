@@ -17,10 +17,12 @@ export default class CreateOrders1589419189186 implements MigrationInterface {
             isPrimary: true,
             isGenerated: true,
             generationStrategy: 'uuid',
+            default: 'uuid_generate_v4()',
           },
           {
             name: 'customer_id',
             type: 'uuid',
+            isNullable: true,
           },
           {
             name: 'created_at',
@@ -43,6 +45,8 @@ export default class CreateOrders1589419189186 implements MigrationInterface {
         columnNames: ['customer_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'customers',
+        onDelete: 'SET NULL',
+        onUpdate: 'CASCADE',
       }),
     );
   }
